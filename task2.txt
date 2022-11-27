@@ -1,0 +1,23 @@
+[ec2-user@ip-172-31-11-66 ~]$ sudo su
+[root@ip-172-31-11-66 ec2-user]# cat >gowtham.txt
+i am from coimbatore
+completed mca
+[root@ip-172-31-11-66 ec2-user]# ls -al
+total 16
+drwx------ 3 ec2-user ec2-user  93 Nov 27 13:49 .
+drwxr-xr-x 3 root     root      22 Nov 27 13:33 ..
+-rw-r--r-- 1 ec2-user ec2-user  18 Jul 15  2020 .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 Jul 15  2020 .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 Jul 15  2020 .bashrc
+-rw-r--r-- 1 root     root      35 Nov 27 13:50 gowtham.txt
+drwx------ 2 ec2-user ec2-user  29 Nov 27 13:33 .ssh
+[root@ip-172-31-11-66 ec2-user]# chmod 764 gowtham.txt
+[root@ip-172-31-11-66 ec2-user]# ls -al
+total 16
+drwx------ 3 ec2-user ec2-user  93 Nov 27 13:49 .
+drwxr-xr-x 3 root     root      22 Nov 27 13:33 ..
+-rw-r--r-- 1 ec2-user ec2-user  18 Jul 15  2020 .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 Jul 15  2020 .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 Jul 15  2020 .bashrc
+-rwxrw-r-- 1 root     root      35 Nov 27 13:50 gowtham.txt
+drwx------ 2 ec2-user ec2-user  29 Nov 27 13:33 .ssh
