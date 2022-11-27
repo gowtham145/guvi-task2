@@ -1,0 +1,370 @@
+[ec2-user@ip-172-31-11-66 ~]$ sudo su
+[root@ip-172-31-11-66 ec2-user]# useradd gowtham
+[root@ip-172-31-11-66 ec2-user]# useradd vishnu
+[root@ip-172-31-11-66 ec2-user]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:999:997:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+rngd:x:998:996:Random Number Generator Daemon:/var/lib/rngd:/sbin/nologin
+ec2-instance-connect:x:997:995::/home/ec2-instance-connect:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:996:994::/var/lib/chrony:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+joe:x:1001:1001::/home/joe:/bin/bash
+gowtham:x:1002:1002::/home/gowtham:/bin/bash
+vishnu:x:1003:1003::/home/vishnu:/bin/bash
+[root@ip-172-31-11-66 ec2-user]# userdel gowtham
+[root@ip-172-31-11-66 ec2-user]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:999:997:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+rngd:x:998:996:Random Number Generator Daemon:/var/lib/rngd:/sbin/nologin
+ec2-instance-connect:x:997:995::/home/ec2-instance-connect:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:996:994::/var/lib/chrony:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+joe:x:1001:1001::/home/joe:/bin/bash
+vishnu:x:1003:1003::/home/vishnu:/bin/bash
+[root@ip-172-31-11-66 ec2-user]# groupadd emp
+[root@ip-172-31-11-66 ec2-user]# groupadd boss
+[root@ip-172-31-11-66 ec2-user]# cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ec2-user
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:ec2-user
+systemd-network:x:192:
+dbus:x:81:
+ssh_keys:x:998:
+rpc:x:32:
+libstoragemgmt:x:997:
+sshd:x:74:
+rpcuser:x:29:
+nfsnobody:x:65534:
+rngd:x:996:
+ec2-instance-connect:x:995:
+slocate:x:21:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:994:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+screen:x:84:
+tcpdump:x:72:
+ec2-user:x:1000:
+joe:x:1001:
+vishnu:x:1003:
+emp:x:1004:
+boss:x:1005:
+[root@ip-172-31-11-66 ec2-user]# groupdel boss
+[root@ip-172-31-11-66 ec2-user]# cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ec2-user
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:ec2-user
+systemd-network:x:192:
+dbus:x:81:
+ssh_keys:x:998:
+rpc:x:32:
+libstoragemgmt:x:997:
+sshd:x:74:
+rpcuser:x:29:
+nfsnobody:x:65534:
+rngd:x:996:
+ec2-instance-connect:x:995:
+slocate:x:21:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:994:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+screen:x:84:
+tcpdump:x:72:
+ec2-user:x:1000:
+joe:x:1001:
+vishnu:x:1003:
+emp:x:1004:
+[root@ip-172-31-11-66 ec2-user]# useradd joe
+useradd: user 'joe' already exists
+[root@ip-172-31-11-66 ec2-user]# useradd david
+[root@ip-172-31-11-66 ec2-user]# gpasswd -M vishnu,david emp
+[root@ip-172-31-11-66 ec2-user]# cat/etc/group
+bash: cat/etc/group: No such file or directory
+[root@ip-172-31-11-66 ec2-user]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:999:997:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+rngd:x:998:996:Random Number Generator Daemon:/var/lib/rngd:/sbin/nologin
+ec2-instance-connect:x:997:995::/home/ec2-instance-connect:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:996:994::/var/lib/chrony:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+joe:x:1001:1001::/home/joe:/bin/bash
+vishnu:x:1003:1003::/home/vishnu:/bin/bash
+david:x:1004:1005::/home/david:/bin/bash
+[root@ip-172-31-11-66 ec2-user]# cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ec2-user
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:ec2-user
+systemd-network:x:192:
+dbus:x:81:
+ssh_keys:x:998:
+rpc:x:32:
+libstoragemgmt:x:997:
+sshd:x:74:
+rpcuser:x:29:
+nfsnobody:x:65534:
+rngd:x:996:
+ec2-instance-connect:x:995:
+slocate:x:21:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:994:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+screen:x:84:
+tcpdump:x:72:
+ec2-user:x:1000:
+joe:x:1001:
+vishnu:x:1003:
+emp:x:1004:vishnu,david
+david:x:1005:
+[root@ip-172-31-11-66 ec2-user]# userdel vishnu
+[root@ip-172-31-11-66 ec2-user]# cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ec2-user
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:ec2-user
+systemd-network:x:192:
+dbus:x:81:
+ssh_keys:x:998:
+rpc:x:32:
+libstoragemgmt:x:997:
+sshd:x:74:
+rpcuser:x:29:
+nfsnobody:x:65534:
+rngd:x:996:
+ec2-instance-connect:x:995:
+slocate:x:21:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:994:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+screen:x:84:
+tcpdump:x:72:
+ec2-user:x:1000:
+joe:x:1001:
+emp:x:1004:david
+david:x:1005:
+[root@ip-172-31-11-66 ec2-user]# useradd naren
+[root@ip-172-31-11-66 ec2-user]# gpasswd -a naren emp
+Adding user naren to group emp
+[root@ip-172-31-11-66 ec2-user]# cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ec2-user
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:ec2-user
+systemd-network:x:192:
+dbus:x:81:
+ssh_keys:x:998:
+rpc:x:32:
+libstoragemgmt:x:997:
+sshd:x:74:
+rpcuser:x:29:
+nfsnobody:x:65534:
+rngd:x:996:
+ec2-instance-connect:x:995:
+slocate:x:21:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:994:
+stapusr:x:156:
+stapsys:x:157:
+stapdev:x:158:
+screen:x:84:
+tcpdump:x:72:
+ec2-user:x:1000:
+joe:x:1001:
+emp:x:1004:david,naren
+david:x:1005:
+naren:x:1006:
+[root@ip-172-31-11-66 ec2-user]# 
